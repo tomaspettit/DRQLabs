@@ -1,3 +1,6 @@
+//Name: Tomás Pettit
+//Student ID: G00419414
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar';
 import Header from './components/Header';
@@ -9,7 +12,7 @@ function App() {
     <Router>
       <NavigationBar />
       <Routes>
-        <Route path="/" element={<Content />} />
+        <Route path="/home" element={<Content />} />
         <Route path="/read" element={<Footer />} />
         <Route path="/create" element={<Header />} />
       </Routes>
