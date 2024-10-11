@@ -1,8 +1,9 @@
+//IMPORT
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-
+//Navigation Bar - Bootstrap , Handles Links
 const NavigationBar = () => {
   return (
         <Navbar bg="primary" data-bs-theme="dark">
@@ -18,4 +19,5 @@ const NavigationBar = () => {
   );
 };
 
+//export to App.js
 export default NavigationBar;
