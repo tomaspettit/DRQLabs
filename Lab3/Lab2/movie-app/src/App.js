@@ -1,13 +1,11 @@
-//Name: Tomás Pettit
-//Student ID: G00419414
-
+//IMPORTS
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar';
 import Content from './components/Content';
 import Read from './components/read';
 import Create from './components/create';
 
-
+// App Function - Displaying compenents - using client side routing handling paths
 function App() {
   return (
     <Router>
@@ -21,4 +19,5 @@ function App() {
   );
 }
 
+//export app
 export default App;
