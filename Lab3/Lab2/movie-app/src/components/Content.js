@@ -1,5 +1,4 @@
-import React from 'react';
-
+//Content Compenent displays hello world! and date
 const Content = () => {
   return (
     <div>
@@ -9,4 +8,5 @@ const Content = () => {
   );
 }
 
+//export to App.js
 export default Content;
