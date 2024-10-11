@@ -1,7 +1,6 @@
-//Read component
-import React from 'react';
+//Read Function - Displaying Movies Component
 
-//Import Movies from ./components/movies
+//IMPORT Movies
 import Movies from './movies';
 
 //Exercise 2 Task 2: JSON Data => Title, Year, imdbID, Type & Poster
@@ -39,4 +38,5 @@ const Read = () => {
     );
 }
 
+//export to App.js
 export default Read;
