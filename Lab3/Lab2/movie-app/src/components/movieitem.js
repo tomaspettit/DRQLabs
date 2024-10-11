@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+//MovieItem Function
 
-//Create MovieItem components
-//Boostrap Card for Exercise 3
-import Card from 'react-bootstrap/Card';
+//IMPORTS
+import { useEffect } from "react";
+import Card from 'react-bootstrap/Card'; //Boostrap Card for Exercise 3
 
 const MovieItem = (props)=> {
   useEffect(() => {
@@ -27,6 +27,7 @@ const MovieItem = (props)=> {
   );
 }
 
+//export to App.js
 export default MovieItem;
 
 //no useEffect
