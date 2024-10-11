@@ -1,6 +1,6 @@
-//Movies component
+//Movies Function - Displaying MovieItem component
 
-//Import MovieItem from ./components/movieitem
+//IMPORT MovieItem
 import MovieItem from "./movieitem";
 
 const Movies = (props) =>{
@@ -12,4 +12,5 @@ const Movies = (props) =>{
       ));
     }
 
+//export to App.js
 export default Movies; 
