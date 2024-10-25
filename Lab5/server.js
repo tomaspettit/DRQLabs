@@ -1,37 +1,31 @@
 // server.js
 
 //Exercise 3: Building a Simple Express Server
+
+//import express Library
 const express = require('express');
+
+//Create an Express application called 'app'
 const app = express();
+//Set variable port 3000, the port of the server will listen
 const port = 3000;
 
 app.get('/', (req, res) => {
     res.send('Welcome to Data Respresentation & Querying');
 });
 
-//Listens on localhost:3000
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
-
 //Access http://localhost:3000
-
-//Error handling
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something went wrong!');
-});
 
 //Exercise 4: Route with URL Parameters
 
-//Add URL parameter
+//Set up route for my first name page
 app.get('/hello/:fname', (req, res) => {
     const fname = req.params.fname;
     res.send(`Hello ${fname}`);
 });
 //Access http://localhost:3000/hello/Tomás
 
-//Add the second URL parameter
+//Set up rotate for my last name page
 app.get('/hello/:fname/:lname', (req, res) => {
     const fname = req.params.fname;
     const lname = req.params.lname;
@@ -42,7 +36,7 @@ app.get('/hello/:fname/:lname', (req, res) => {
 
 //Exercise 5: Return JSON Data
 
-//Add the movies route
+//Set up route for the movies page
 app.get('/api/movies', (req, res) => {
     const movies = [
         {
@@ -73,7 +67,7 @@ app.get('/api/movies', (req, res) => {
 
 //Exercise 6: Serving Static HTML
 
-//Add a route /index that serves an index.html file
+//Routing /index so it can serves an index.html file
 //Serve the HTML file
 const path = require('path');
 
@@ -86,7 +80,7 @@ app.get('/index', (req, res) => {
 
 
 //Exercise 7: Handling GET Form Submission
-//Handle the GET request
+//GET request
 app.get('/name', (req, res) => {
     const firstname = req.query.firstname;
     const lastname = req.query.lastname;
@@ -96,12 +90,24 @@ app.get('/name', (req, res) => {
 app.use(express.static('public'));
 
 //Exercise 8: Handling POST Form Submission
+//Body parser Middleware to parse URL-encoded data
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//Handle POST request
+//POST request handler for the /name endpoint
 app.post('/name', (req, res) => {
     const firstname = req.body.firstname;
     const lastname = req.body.lastname;
     res.send(`Hello ${firstname} ${lastname}`);
+});
+
+//Listens on localhost:3000
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+
+//Error handling
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
 });
