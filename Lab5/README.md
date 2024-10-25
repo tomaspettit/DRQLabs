@@ -1,7 +1,7 @@
-###Exercise 2: What is Express?
+## Exercise 2: What is Express?
 Express.js is a fast, flexible and minimalist web framework for Node.js. It's effectively a tool that simplifies building web applications and APIs using JavaScript on the server side. Express is an open-source that is developed and maintained by the Node.js foundation.
 
 Express.js offers a robust set of features that enhance your productivity and streamline your web application. It makes it easier to organize your application’s functionality with middleware and routing. It adds helpful utilities to Node HTTP objects and facilitates the rendering of dynamic HTTP objects.
 
-##Why learn Express?
+## Why learn Express?
 Express is a user-friendly framework that simplifies the development process of Node applications. It uses JavaScript as a programming language and provides an efficient way to build web applications and APIs. With Express, you can easily handle routes, requests, and responses, which makes the process of creating robust and scalable applications much easier. Moreover, it is a lightweight and flexible framework that is easy to learn and comes loaded with middleware options. Whether you are a beginner or an experienced developer, Express is a great choice for building your application. To master Express.js and use it in full-stack development, the Full Stack Development with React & Node JS course covers everything from routing to middleware integration
