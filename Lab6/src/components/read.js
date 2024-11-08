@@ -7,7 +7,8 @@ import axios from "axios";
 
 // Read Function
 const Read = () => {
-
+  //state: current state value. E.g. movies
+  //setState: update the state value. E.g. setMovies
   const [movies, setMovies] = useState([]);
 
   //useEffect() is used to log props to the console whenever the component mounts or updates
@@ -35,4 +36,5 @@ const Read = () => {
   );
 }
 
+//Export to App.js
 export default Read;
