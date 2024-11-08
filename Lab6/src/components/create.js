@@ -20,9 +20,8 @@ const Create = () => {
         //All 3 input boxes has been added
         } else{
         e.preventDefault();
+        console.log(`Title: ${title}, Year: ${year}, Poster: ${poster}`);
         }
-    
-    console.log(`Title: ${title}, Year: ${year}, Poster: ${poster}`);
     
     const movie = {
       title: title,
@@ -72,4 +71,7 @@ const Create = () => {
         </div>
     );
 }
+
+//Export to App.js
+export default Create;
 export default Create;
