@@ -1,6 +1,10 @@
+// movieitem.js
+
+// IMPORTS
 import { useEffect } from "react";
 import Card from 'react-bootstrap/Card';
 
+// MovieItem Function
 const MovieItem = (props)=> {
   useEffect(() => {
     console.log("Movie Item:", props.mymovie);
@@ -20,5 +24,8 @@ const MovieItem = (props)=> {
     </div>
   );
 }
+
+// Export to App.js
+export default MovieItem;
 
 export default MovieItem;
