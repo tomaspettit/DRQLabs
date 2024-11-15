@@ -77,27 +77,76 @@ res.status(500).send('Something went wrong!');
 
 /*app.get('/api/movies', (req, res) => {
     const movies = [
-        {
-          "Title": "Avengers: Infinity War (server)",
-          "Year": "2018",
-          "imdbID": "tt4154756",
-          "Type": "movie",
-          "Poster": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"
-        },
-        {
-          "Title": "Captain America: Civil War (server)",
-          "Year": "2016",
-          "imdbID": "tt3498820",
-          "Type": "movie",
-          "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX300.jpg"
-        },
-        {
-          "Title": "World War Z (server)",
-          "Year": "2013",
-          "imdbID": "tt0816711",
-          "Type": "movie",
-          "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
-        }
-      ];
-    res.status(200).json({movies})
+    {
+        "_id": "67373551f4d029e5ca282cfa",
+        "title": "The Avengers",
+        "year": "2012",
+        "poster": "https://th.bing.com/th/id/OIP.yZqxvO2SQ-tJ9bGFcuobhwHaLH?w=121&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+        "__v": 0
+    },
+    {
+        "_id": "67373670f4d029e5ca282d07",
+        "title": "The Marvels",
+        "year": "2023",
+        "poster": "https://upload.wikimedia.org/wikipedia/en/7/7a/The_Marvels_poster.jpg",
+        "__v": 0
+    },
+    {
+        "_id": "6737368cf4d029e5ca282d09",
+        "title": "Guardians of the Galaxy Vol. 3",
+        "year": "2023",
+        "poster": "https://upload.wikimedia.org/wikipedia/en/7/74/Guardians_of_the_Galaxy_Vol._3_poster.jpg",
+        "__v": 0
+    },
+    {
+        "_id": "67373c051df97c08eac86a10",
+        "title": "Guardians of the Galaxy",
+        "year": "2014",
+        "poster": "https://upload.wikimedia.org/wikipedia/en/3/33/Guardians_of_the_Galaxy_%28film%29_poster.jpg",
+        "__v": 0
+    },
+    {
+        "_id": "67373c1f1df97c08eac86a12",
+        "title": "Guardians of the Galaxy Vol. 2",
+        "year": "2017",
+        "poster": "https://upload.wikimedia.org/wikipedia/en/3/32/Guardians_of_the_Galaxy_Vol._2_poster.jpg",
+        "__v": 0
+    },
+    {
+        "_id": "67373c591df97c08eac86a14",
+        "title": "Spider Man: Homecoming",
+        "year": "2017",
+        "poster": "https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg",
+        "__v": 0
+    },
+    {
+        "_id": "67373c801df97c08eac86a16",
+        "title": "Avengers: Endgame",
+        "year": "2019",
+        "poster": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg",
+        "__v": 0
+    },
+    {
+        "_id": "67373cbc1df97c08eac86a18",
+        "title": "Thor: Ragnarok",
+        "year": "2017",
+        "poster": "https://upload.wikimedia.org/wikipedia/en/7/7d/Thor_Ragnarok_poster.jpg",
+        "__v": 0
+    },
+    {
+        "_id": "67373e017347c9ee7a84bf4f",
+        "title": "Back to the Future Part III",
+        "year": "1990",
+        "poster": "https://upload.wikimedia.org/wikipedia/en/4/4e/Back_to_the_Future_Part_III.jpg",
+        "__v": 0
+    },
+    {
+        "_id": "67373eb191a8877257f39a26",
+        "title": "The Simpsons Movie",
+        "year": "2007",
+        "poster": "https://upload.wikimedia.org/wikipedia/en/d/d5/The_Simpsons_Movie_%282007%29.png",
+        "__v": 0
+    }
+];
+    res.status(200).json({movies});
 });*/
