@@ -39,12 +39,19 @@ const movieSchema = new mongoose.Schema({
   poster: String
 });
 
-const movieModel = mongoose.model('myMovies', movieSchema);
+const movieModel = new mongoose.model('myMovies', movieSchema);
 
 //Retrieve All Data using GET method -> Implement a method to fetch all movie records
 app.get('/api/movies', async (req, res) => {
   const movies = await movieModel.find({});
   res.status(200).json(movies);
+});
+
+//Retrieve Data by ID -> Create a method to retrieve a specific movie by its ID
+//Copy the ID for what has showing on the MongoDB data
+app.get('/api/movie/:id', async (req, res) => {
+  const movie = await movieModel.findById(req.params.id);
+  res.send(movie);
 });
 
 //Add Data to MongoDB using POST method-> Create a method to add new movie records
@@ -55,15 +62,8 @@ app.post('/api/movies', async (req, res)=>{
   const newMovie = new movieModel({ title, year, poster });
   await newMovie.save();
 
-  res.status(201).json({ message: 'Movie created successfully', movie: newMovie });
+  res.status(201).json({ "message": 'Movie created successfully', movie: newMovie });
 })
-
-//Retrieve Data by ID -> Create a method to retrieve a specific movie by its ID
-//Copy the ID for what has showing on the MongoDB data
-app.get('/api/movie/:id', async (req, res) => {
-  const movie = await movieModel.findById(req.params.id);
-  res.send(movie);
-});
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
