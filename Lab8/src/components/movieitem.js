@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom'; //A component from React Router that lets you navigate to a new route without refreshing the page. It is used to create in-app navigation.
+
+/* A component from React Router that lets you navigate to a new route without refreshing the page. 
+It is used to create in-app navigation.*/
+import { Link } from 'react-router-dom'; 
 
 // to={"/edit/" + props.mymovie._id}: This to attribute defines the path the Link component should navigate to when clicked.
 
