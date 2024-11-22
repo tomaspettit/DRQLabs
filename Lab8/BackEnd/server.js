@@ -39,23 +39,27 @@ const movieSchema = new mongoose.Schema({
 
 const movieModel = new mongoose.model('myMovies',movieSchema);
 
+// This route are added to support a new movie data
 // Retrieve All Data using GET method -> Implement a method to fetch all movie records
 app.get('/api/movies', async (req, res) => {
     const movies = await movieModel.find({});
     res.status(200).json({movies})
 });
 
-// GET /api/movie/:id: This route fetches a specific movie by its ID.
-app.get('/api/movie/:id', async (req, res) => {
-  let movie = await movieModel.findById({ _id: req.params.id });
-  res.send(movie);
-});
+// Two new routes are added to support editing movie data
+  // The GET method of the route is for create and edit one movie
+  // GET /api/movie/:id: This route fetches a specific movie by its ID.
+  app.get('/api/movie/:id', async (req, res) => {
+    let movie = await movieModel.findById({ _id: req.params.id });
+    res.send(movie);
+  });
 
-// PUT /api/movie/:id: This route updates a specific movie’s information.
-app.put('/api/movie/:id', async (req, res) => {
-  let movie = await movieModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
-  res.send(movie);
-});
+  // The route is for only editing one movie
+  // PUT /api/movie/:id: This route updates a specific movie’s information.
+  app.put('/api/movie/:id', async (req, res) => {
+    let movie = await movieModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.send(movie);
+  });
 
 //Add Data to MongoDB using POST method-> Create a method to add new movie records
 app.post('/api/movies',async (req, res)=>{
@@ -68,6 +72,7 @@ app.post('/api/movies',async (req, res)=>{
     res.status(201).json({"message":"Movie Added!",Movie:newMovie});
 })
 
+// Listens on localhost:4000
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
@@ -76,26 +81,4 @@ app.listen(port, () => {
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something went wrong!');
-  });
-
-// {
-//   "Title": "Avengers: Infinity War (server)",
-//   "Year": "2018",
-//   "imdbID": "tt4154756",
-//   "Type": "movie",
-//   "Poster": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"
-// },
-// {
-//   "Title": "Captain America: Civil War (server)",
-//   "Year": "2016",
-//   "imdbID": "tt3498820",
-//   "Type": "movie",
-//   "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX300.jpg"
-// },
-// {
-//   "Title": "World War Z (server)",
-//   "Year": "2013",
-//   "imdbID": "tt0816711",
-//   "Type": "movie",
-//   "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
-// }
+});
