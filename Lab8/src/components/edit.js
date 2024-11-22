@@ -18,7 +18,6 @@ export default function Edit(props) {
   const [poster, setPoster] = useState("");
   const navigate = useNavigate();
 
-// useEffect()
 useEffect(() => {
     axios.get('http://localhost:4000/api/movie/' + id)
         .then((response) => {
@@ -31,7 +30,8 @@ useEffect(() => {
         });
 }, [id]);
 
-// HandleSubmit
+/* handleSubmit => after input all three boxes, the edit button clicked, and it will navigate 
+ to '/read' to see if it that changes */
 const handleSubmit = (event) => {
     event.preventDefault();
     const newMovie = { id, title, year, poster };
